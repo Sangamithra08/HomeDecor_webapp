@@ -27,7 +27,7 @@ const pages = ['Home', 'About', 'Contact', 'Login'];
 function Nav() {
     const navigate = useNavigate()
     const [anchorElNav, setAnchorElNav] = React.useState(null);
-    const [anchorElUser, setAnchorElUser] = React.useState(null);
+    // const [anchorElUser, setAnchorElUser] = React.useState(null);
     const [open, setOpen] = React.useState(false);
     // const handleOpen = () => setOpen(true);
     const handleClose = () => setOpen(false);
@@ -51,7 +51,7 @@ function Nav() {
         bgcolor: 'rgb(55, 199, 170)',
         border: '2px solid blueviolet',
         boxShadow: 24,
-        position: 'fixed',
+        // position: 'f',
         p: 4,
     };
     // const handleOpenUserMenu = (event) => {

@@ -1,23 +1,14 @@
 import { useState } from "react";
-import { Navigate, useNavigate, Link } from 'react-router-dom';  // Import Link from 'react-router-dom'
+import {  useNavigate, Link } from 'react-router-dom';  // Import Link from 'react-router-dom'
 import '../Assests/Css/login.css';
 
 const Login = () => {
-    // const navigate = useNavigate()
     const [visible, setVisible] = useState(false);
     const navigate = useNavigate();
     const [data, setData] = useState({
         username: '',
         password: ''
     });
-
-    const toggle = () => {
-        setVisible(!visible);
-    }
-
-    const handleSignup = () => {
-        navigate('/Signup')
-    }
     const handleLogin = (e) => {
         e.preventDefault();
 
