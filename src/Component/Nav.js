@@ -7,40 +7,40 @@ import Typography from '@mui/material/Typography';
 import Menu from '@mui/material/Menu';
 import MenuIcon from '@mui/icons-material/Menu';
 import Container from '@mui/material/Container';
-import Avatar from '@mui/material/Avatar';
+// import Avatar from '@mui/material/Avatar';
 import Button from '@mui/material/Button';
 import Tooltip from '@mui/material/Tooltip';
 import MenuItem from '@mui/material/MenuItem';
 import AdbIcon from '@mui/icons-material/Adb';
 import Api from '@mui/icons-material/Api'
 import Account from '@mui/icons-material/AccountCircle';
-import { Navigate, useNavigate } from 'react-router-dom';
-import { Link } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
+// import { Link } from 'react-router-dom';
 
 import Modal from '@mui/material/Modal';
 import TextField from '@mui/material/TextField';
-import Signup from '../Pages/Signup';
+// import Signup from '../Pages/Signup';
 
 const pages = ['Home', 'About', 'Contact', 'Login'];
-const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
+// const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
 
 function Nav() {
     const navigate = useNavigate()
     const [anchorElNav, setAnchorElNav] = React.useState(null);
-    const [anchorElUser, setAnchorElUser] = React.useState(null);
+    // const [anchorElUser, setAnchorElUser] = React.useState(null);
     const [open, setOpen] = React.useState(false);
-    const handleOpen = () => setOpen(true);
+    // const handleOpen = () => setOpen(true);
     const handleClose = () => setOpen(false);
 
 
-    const handleApiIconClick = () => {
-        // Navigate to the dashboard route when API icon is clicked
-        navigate('/dashboard');
-    };
-    const handleOpenNavMenu = (event) => {
-        setAnchorElNav(event.currentTarget);
+    // const handleApiIconClick = () => {
+    //     // Navigate to the dashboard route when API icon is clicked
+    //     navigate('/dashboard');
+    // };
+    // const handleOpenNavMenu = (event) => {
+    //     setAnchorElNav(event.currentTarget);
 
-    };
+    // };
 
     const style = {
         position: 'absolute',

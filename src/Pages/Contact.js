@@ -3,14 +3,14 @@ import { Link } from "react-router-dom";
 import '../Assests/Css/contact.css';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { useState } from "react";
-import { faHome, faArrowRightFromBracket, faFileInvoice, faFileInvoiceDollar, faMoneyBill, faCalendarWeek } from "@fortawesome/free-solid-svg-icons";
+import { faHome, faArrowRightFromBracket, faFileInvoiceDollar, faMoneyBill, faCalendarWeek } from "@fortawesome/free-solid-svg-icons";
 
 const Dashboard = () => {
     const [hoveredIndex, setHoveredIndex] = useState(null);
 
-    const handleTouchStart = (index) => {
-        setHoveredIndex(index === hoveredIndex ? null : index);
-    };
+    // const handleTouchStart = (index) => {
+    //     setHoveredIndex(index === hoveredIndex ? null : index);
+    // };
 
     const cardsData = [
         {
