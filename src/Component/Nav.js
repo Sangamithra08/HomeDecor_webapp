@@ -27,7 +27,7 @@ const pages = ['Home', 'About', 'Contact', 'Login'];
 function Nav() {
     const navigate = useNavigate()
     const [anchorElNav, setAnchorElNav] = React.useState(null);
-    // const [anchorElUser, setAnchorElUser] = React.useState(null);
+    const [anchorElUser, setAnchorElUser] = React.useState(null);
     const [open, setOpen] = React.useState(false);
     // const handleOpen = () => setOpen(true);
     const handleClose = () => setOpen(false);
@@ -54,17 +54,17 @@ function Nav() {
         position: 'fixed',
         p: 4,
     };
-    const handleOpenUserMenu = (event) => {
-        setAnchorElUser(event.currentTarget);
-    };
+    // const handleOpenUserMenu = (event) => {
+    //     setAnchorElUser(event.currentTarget);
+    // };
 
     const handleCloseNavMenu = () => {
         setAnchorElNav(null);
     };
 
-    const handleCloseUserMenu = () => {
-        setAnchorElUser(null);
-    };
+    // const handleCloseUserMenu = () => {
+    //     setAnchorElUser(null);
+    // };
     const handleLogin = () => {
         navigate('/login')
     }

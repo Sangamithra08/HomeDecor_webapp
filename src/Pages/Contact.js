@@ -8,9 +8,9 @@ import { faHome, faArrowRightFromBracket, faFileInvoiceDollar, faMoneyBill, faCa
 const Dashboard = () => {
     const [hoveredIndex, setHoveredIndex] = useState(null);
 
-    // const handleTouchStart = (index) => {
-    //     setHoveredIndex(index === hoveredIndex ? null : index);
-    // };
+    const handleTouchStart = (index) => {
+        setHoveredIndex(index === hoveredIndex ? null : index);
+    };
 
     const cardsData = [
         {
