@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faUser, faKey, faSignature } from '@fortawesome/free-solid-svg-icons';
 import '../Assests/Css/signup2.css'
-import { Navigate, useNavigate } from 'react-router-dom';
+import {  useNavigate } from 'react-router-dom';
 
 function Signup() {
   const [name, setName] = useState('');
@@ -13,9 +13,9 @@ function Signup() {
   
 
   const navigate = useNavigate()
-  const handleHome = () => {
-    navigate('/')
-  }
+  // const handleHome = () => {
+  //   navigate('/')
+  // }
   const handleNameChange = (e) => {
     setName(e.target.value);
   };

@@ -23,16 +23,16 @@ const Home = () => {
       <div className="main-content">
       
         <div className="achievement-container">
-          <img className="dash-img" src="http://clipart-library.com/image_gallery/n751255.png" alt="Achievement Image" ></img>
+          <img className="dash-img" src="http://clipart-library.com/image_gallery/n751255.png" alt="Achievement" ></img>
           <p>With an unwavering commitment to excellence, our company has successfully completed over 500 distinctive home interior projects, showcasing our dedication to quality and innovation.</p>
         </div>
         <div className="achievement-container">
-          <img className="dash-img" src="https://covers.magazinecloner.com/covers/212097/mid/0000.jpg" alt="Achievement Image" />
+          <img className="dash-img" src="https://covers.magazinecloner.com/covers/212097/mid/0000.jpg" alt="Achievement" />
           <p>Our company's magazines showcase the latest trends and innovations in home interior design, providing inspiration for creating personalized and stylish living spaces.</p>
 
         </div>
         <div className="achievement-container">
-          <img className="dash-img" src="https://pngimg.com/uploads/award/award_PNG58.png" alt="Achievement Image" />
+          <img className="dash-img" src="https://pngimg.com/uploads/award/award_PNG58.png" alt="Achievement" />
           <p>Acknowledged as the "Best Interior Design Company" in 2022, our commitment to creating aesthetically pleasing and functional spaces has been recognized by industry experts.</p>
         </div>
       </div>
