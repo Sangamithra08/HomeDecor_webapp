@@ -74,8 +74,8 @@ function Nav() {
     const handleHome = () => {
         navigate('/')
     }
-    const handleContact = () => {
-        navigate('/contact')
+    const handleDashboard = () => {
+        navigate('/dashboard')
     }
     const handleSignup = () => {
         navigate('/Signup')
@@ -85,6 +85,9 @@ function Nav() {
     }
     return (
         <>
+            <div style={{ height: '5vh', width: '100vw', display: 'flex', justifyContent: 'center', alignItems: 'center', backgroundColor: 'rgb(30, 15, 20)', color: 'white' }}>
+                <p > <b >FREE SHIPPING & FREE RETURNS </b> TO OVER 40 COUNTRIES!</p>
+            </div>
             <AppBar position="static" sx={{ bgcolor: 'rgba(123, 211, 170, 0.768)' }}>
                 <Container maxWidth="xl">
                     <Toolbar disableGutters>
@@ -171,7 +174,7 @@ function Nav() {
                             <Button onClick={handleAbout}
                                 sx={{ my: 2, color: 'white', display: 'block', '&:hover': { backgroundColor: 'rgb(61, 120, 102)', height: '100%' } }}>About
                             </Button>
-                            <Button onClick={handleContact}
+                            <Button onClick={handleDashboard}
                                 sx={{ my: 2, color: 'white', display: 'block', '&:hover': { backgroundColor: 'rgb(61, 120, 102)', height: '100%' } }}>Dashboard
                             </Button>
                             <Button onClick={handleLogin}
