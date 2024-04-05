@@ -1,117 +1,47 @@
-import { useState } from "react";
-import { useNavigate, Link } from 'react-router-dom';  // Import Link from 'react-router-dom'
-import '../Assests/Css/login.css';
-import { toast, ToastContainer } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
-import axios from "axios";
+import React, { useState } from 'react';
+import axios from 'axios';
+
 const Login = () => {
-    const history = useNavigate();
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
+  const [error, setError] = useState('');
 
-    const [data, setData] = useState({
-        email:'',
-        password: ''
-    })
-
-    const handleChange = (e) => {
-        setData({...data, [e.target.id]: e.target.value})
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    try {
+      const response = await axios.post('http://localhost:8080/api/v1/user/login', {
+        email,
+        password,
+      });
+      if (response.status === 200) {
+        // Login successful, redirect or perform other actions
+        console.log('Login successful');
+      } else {
+        setError('Invalid credentials');
+      }
+    } catch (error) {
+      console.error('Login error:', error);
+      setError('Server error. Please try again later.');
     }
+  };
 
-    const handleSubmit = (e) => {
-        e.preventDefault();
-        axios.post("http://localhost:8080/api/v1/user/login", data)
-        .then( response => {
-            if(response.data == true)
-            {
-                toast.info('success!', {
-                    position: "bottom-right",
-                    autoClose: 1500,
-                    hideProgressBar: false,
-                    closeOnClick: true,
-                    pauseOnHover: true,
-                    draggable: true,
-                    progress: undefined,
-                    theme: "dark",
-                });
-                setTimeout(() => {
-                    history('/home')
-                }, 1800)
-            }       
-            else{
-                toast.error('Invalid Credentials!', {
-                    position: "bottom-right",
-                    autoClose: 3000,
-                    hideProgressBar: false,
-                    closeOnClick: true,
-                    pauseOnHover: true,
-                    draggable: true,
-                    progress: undefined,
-                    theme: "dark",
-                });
-            }
-        }
-        )
-        .catch(error => {
-            toast.error('Server Error! Please try again in some time', {
-                position: "bottom-right",
-                autoClose: 3000,
-                hideProgressBar: false,
-                closeOnClick: true,
-                pauseOnHover: true,
-                draggable: true,
-                progress: undefined,
-                theme: "dark",
-            });
-        });
-    };
+  return (
+    <div>
+      <h2>Login</h2>
+      <form onSubmit={handleSubmit}>
+        <div>
+          <label>Email:</label>
+          <input type="email" value={email} onChange={(e) => setEmail(e.target.value)} />
+        </div>
+        <div>
+          <label>Password:</label>
+          <input type="password" value={password} onChange={(e) => setPassword(e.target.value)} />
+        </div>
+        <button type="submit">Login</button>
+        {error && <div>{error}</div>}
+      </form>
+    </div>
+  );
+};
 
-
-    return (
-        <>
-            <div className="login-container">
-                <div className="login-box">
-                    <h2 className="heading-login">Login</h2>
-                    <form onSubmit={handleSubmit}>
-                         <div className="user-box">
-                            <input type="email" className="input" name="Email" id="email" placeholder="email" onChange={handleChange} />
-                        </div>
-                        <div className="user-box">
-                            <input type="password" className="input" name="password" id="password" placeholder="password" onChange={handleChange} />
-                        </div>
-                        <div className="sub-main">
-                            <div className="btn-last">
-                                <Link to="/signup" className="submit-btn" >
-                                    <input type="submit" value="Submit" />
-                                </Link>
-                                <br></br>
-                                <div>
-                                    <p> Don't have an account?
-                                        <Link to="/Signup">Signup</Link></p>
-                                </div>
-                            </div>
-                            <div className="btn-last">
-                            </div>
-                        </div>
-                    </form>
-                </div>
-            </div>
-            <ToastContainer position="bottom-right" autoClose={5000} hideProgressBar={false} />     
-        </>
-    )
-}
 export default Login;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
