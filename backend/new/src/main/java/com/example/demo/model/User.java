@@ -1,33 +1,37 @@
-package com.sangamithra.mithra.model;
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+package com.example.demo.model;
+
+import jakarta.persistence.*;
+
+import java.util.List;
 
 @Entity
 public class User {
     @Id
-//    @GeneratedValue(strategy = GenerationType.UUID)
-    private String id;
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private int id;
     private String name;
     private String email;
     private String password;
+    @OneToMany(targetEntity = Product.class,cascade = CascadeType.ALL)
+    @JoinColumn(name = "fk_name",referencedColumnName = "id")
+    private List<Product> products;
 
     public User() {
     }
 
-    public User(String id, String name, String email, String password) {
+    public User(int id, String name, String email, String password, List<Product> products) {
         this.id = id;
         this.name = name;
         this.email = email;
         this.password = password;
+        this.products = products;
     }
 
-    public String getId() {
+    public int getId() {
         return id;
     }
 
-    public void setId(String id) {
+    public void setId(int id) {
         this.id = id;
     }
 
@@ -53,5 +57,13 @@ public class User {
 
     public void setPassword(String password) {
         this.password = password;
+    }
+
+    public List<Product> getProducts() {
+        return products;
+    }
+
+    public void setProducts(List<Product> products) {
+        this.products = products;
     }
 }

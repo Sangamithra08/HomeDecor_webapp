@@ -15,6 +15,12 @@ const Footer = () => {
     <footer className="footer-container">
       <div className="flex-container">
         <div className="flex-item">
+          <p className="category">ABOUT</p>
+          <div className="content-about">
+            <p>At Venetto Design we believe in style, in quality and in the beauty of our products. Each Venetto Design item is a unique project, built on history, research, development, and, just like a work of art, on originality.</p>
+          </div>
+        </div>
+        <div className="flex-item">
           <p className="category">COMMUNITY</p>
           <div className="content">
             <p>Blog</p>
@@ -34,13 +40,13 @@ const Footer = () => {
           </div>
         </div>
         <div className="flex-item">
-          <p className="category">USEFUL LINKS</p>
-          <div className="content">
-            <p>Warranty</p>
-            <p>Product Declarations</p>
-            <p>Terms of use</p>
-            <p>Privacy policy</p>
-            <p>Cookie policy</p>
+          <p className="category">NEWS LETTER</p>
+          <div className="content-foot">
+            <p>Sign up to our newsletter to receive exclusive offers.</p>
+            <input type="email" className='input' placeholder='E-mail' />
+           <br></br>
+           <br></br>
+            <button type="submit" className='submit-btn'>SUBSCRIBE</button>
           </div>
         </div>
       </div>

@@ -1,29 +1,61 @@
-.login-container{
-    height: 90vh;
-    width: 100vw;
-}
+
+.login-container {
+    height: 100vh;
+    width: 60vw;
+    display: flex;
+    flex-direction: column; 
+    justify-content: center;
+    align-items: center;
+    color: black;
+    margin-left: 20%;
+  }
+  
+  .login-flex-container {
+    height: 70vh;
+    width: 40vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+  }
 .login-box {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    opacity: 500%;
-    width: 400px;
-    padding: 40px;
-    transform: translate(-50%, -50%);
-    background: #b3eadcac;
+   
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    
+    width: 500px;
+    height: 60vh;
+    
     box-sizing: border-box;
     box-shadow: 0px 1px 31px -1px rgb(91, 139, 126);
     -webkit-box-shadow: 0px 1px 31px -8px rgb(91, 139, 126);
     -moz-box-shadow: 0px 1px 31px -1px rgb(91, 139, 126);
     border-radius: 10px;
+    gap: 1.6rem;
+    margin-top: 20%;
+
+} 
+.input{
+    height: 5vh;
+    width: 20vw;
+    text-decoration: none;
+    border-radius: 0.5rem;
+    text-align:left;
+    font-size: 15px;
+    box-sizing: 4px;
+    border-top:#fff;
+    border-left: #fff;
+    border-right: #fff;
 }
-
-
 .heading-login {
     margin: 0 0 30px;
     padding: 0;
-    color: rgb(78, 194, 159);
+    color:black;
     text-align: center;
+    font-size: 23px;
+    letter-spacing: 0.2rem;
 }
 
 .login-box .user-box {
@@ -47,26 +79,27 @@
     color: rgb(80, 76, 76);
 }
 .submit-btn {
-    position: fixed;
     padding: 10px 20px;
-    color: rgb(21, 45, 141);
+    color:white;
+    letter-spacing: 0.2rem;
+    background-color: rgb(0, 179, 170);
     transition: .5s;
 }
 
 .submit-btn:hover {
-    background: rgb(91, 139, 126);
+    background: rgb(0, 242, 255);
     color: #fff;
     border-radius: 5px;
-    box-shadow: 0 0 5px rgb(91, 139, 126),
-        0 0 25px rgb(91, 139, 126),
-        0 0 50px rgb(91, 139, 126),
-        0 0 100px rgb(91, 139, 126);
+    box-shadow: 0 0 5px rgb(91, 136, 139),
+        0 0 25px rgb(73, 137, 141),
+        0 0 50px rgb(21, 131, 164),
+        0 0 100px rgb(1, 107, 137);
 }
 
 .submit-btn {
-    position: absolute;
     display: flex;
     flex-direction: column;
+    text-decoration: none;
 }
 
 .sub-main{
@@ -75,9 +108,6 @@
     margin: 0px;
 }
 .btn-last{
-    display: flex;
-    justify-content: center;
-    align-items: center;
     gap: 3rem;
-    flex-direction: column;
+    color: grey;
 }

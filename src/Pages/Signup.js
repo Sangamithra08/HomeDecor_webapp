@@ -100,7 +100,7 @@ function Signup() {
           />
         </div>
         <Link to="/" onClick={handleSubmit}>
-          <button type="submit" className="button-signup">
+          <button type="submit" className="submit-btn">
             Signup
           </button>
         </Link>

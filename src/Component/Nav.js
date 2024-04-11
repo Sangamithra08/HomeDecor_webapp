@@ -48,9 +48,10 @@ function Nav() {
         left: '50%',
         transform: 'translate(-50%, -50%)',
         width: 400,
-        bgcolor: 'rgb(55, 199, 170)',
+        bgcolor: 'white',
         border: '2px solid blueviolet',
         boxShadow: 24,
+        color:'black',
         // position: 'f',
         p: 4,
     };
@@ -85,23 +86,23 @@ function Nav() {
     }
     return (
         <>
-            <div style={{ height: '5vh', width: '100vw', display: 'flex', justifyContent: 'center', alignItems: 'center', backgroundColor: 'rgb(30, 15, 20)', color: 'white' }}>
+            <AppBar position="static" sx={{ height: '13vh', width: '100vw',bgcolor: 'white',color:'black',position:'fixed' , fontWeight:'400px' }}>
+            <div style={{ height: '5vh', width: '100vw', display: 'flex', justifyContent: 'center', alignItems: 'center', backgroundColor: 'black', color: 'white'}}>
                 <p > <b >FREE SHIPPING & FREE RETURNS </b> TO OVER 40 COUNTRIES!</p>
             </div>
-            <AppBar position="static" sx={{ bgcolor: 'rgba(123, 211, 170, 0.768)' }}>
-                <Container maxWidth="xl">
+                <Container maxWidth="xl" >
                     <Toolbar disableGutters>
-                        <Api sx={{ display: { xs: 'none', md: 'flex' }, mr: 1, cursor: 'pointer' }} onClick={handleSidepanel} />
+                        <Api sx={{ display: { xs: 'none', md: 'flex' }, mr: 1, cursor: 'pointer' }} onClick={handleHome} />
                         <Typography
                             variant="h6"
                             noWrap
                             component="a"
-                            href="#app-bar-with-responsive-menu"
+                            href="/"
                             sx={{
                                 mr: 2,
                                 display: { xs: 'none', md: 'flex' },
                                 fontFamily: 'monospace',
-                                fontWeight: 700,
+                                fontWeight: 1000,
                                 letterSpacing: '.3rem',
                                 color: 'inherit',
                                 textDecoration: 'none',
@@ -110,7 +111,7 @@ function Nav() {
                             HomeDecor
                         </Typography>
 
-                        <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
+                        <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' },fontSize:'20px' }}>
 
                             <IconButton
                                 size="large"
@@ -169,22 +170,22 @@ function Nav() {
                         <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex', justifyContent: 'end', gap: '1rem' } }}>
 
                             <Button onClick={handleHome}
-                                sx={{ my: 2, color: 'white', display: 'block', '&:hover': { backgroundColor: 'rgb(61, 120, 102)', height: '100%' } }}>Home
+                                sx={{ my: 2, color: 'black', display:'block', '&:hover': {  borderBottom: '2px solid black' } }}>Home
                             </Button>
                             <Button onClick={handleAbout}
-                                sx={{ my: 2, color: 'white', display: 'block', '&:hover': { backgroundColor: 'rgb(61, 120, 102)', height: '100%' } }}>About
+                                sx={{ my: 2, color: 'black', display: 'block', '&:hover': {borderBottom: '2px solid black'  } }}>About
                             </Button>
                             <Button onClick={handleDashboard}
-                                sx={{ my: 2, color: 'white', display: 'block', '&:hover': { backgroundColor: 'rgb(61, 120, 102)', height: '100%' } }}>Dashboard
+                                sx={{ my: 2, color: 'black', display: 'block', '&:hover': {borderBottom: '2px solid black'  } }}>Dashboard
                             </Button>
                             <Button onClick={handleLogin}
-                                sx={{ my: 2, color: 'white', display: 'block', '&:hover': { backgroundColor: 'rgb(61, 120, 102)' } }}>Login
+                                sx={{ my: 2, color: 'black', display: 'block', '&:hover': {borderBottom: '2px solid black' } }}>Login
                             </Button>
 
                         </Box>
 
                         <Box sx={{ flexGrow: 0 }}>
-                            <Tooltip title="Login">
+                            <Tooltip title="Account">
                                 <IconButton onClick={handleLogin} sx={{ p: 0 }}>
                                     <Account sx={{ display: { xs: 'none', md: 'flex' }, mr: 5 }} />
                                 </IconButton>
@@ -193,25 +194,6 @@ function Nav() {
                     </Toolbar>
                 </Container>
             </AppBar>
-            <Modal
-                open={open}
-                onClose={handleClose}
-                aria-labelledby="modal-modal-title"
-                aria-describedby="modal-modal-description"
-            >
-                <Box sx={style}>
-                    <Typography id="modal-modal-title" variant="h6" component="h2" sx={{ color: 'blueviolet' }}>
-                        Login
-                    </Typography>
-                    <TextField id="outlined-basic" label="Username" variant="outlined" color='secondary' sx={{ my: 1, width: '100%' }} />
-                    <TextField id="outlined-basic" label="Passowrd" variant="outlined" color='secondary' sx={{ my: 1, width: '100%' }} />
-                    <Button variant="contained" sx={{ my: 1, width: '100%', backgroundColor: 'blueviolet' }}>Login</Button>
-                    Dont have an account?
-                    <Button onClick={handleSignup}
-                        sx={{ my: 2, color: 'blueviolet', display: 'block' }}>Signup
-                    </Button>
-                </Box>
-            </Modal>
         </>
     );
 }

@@ -1,25 +1,22 @@
 import '../Assests/Css/Home.css'
-import homeGif from '../Assests/Img/home_gif.webp';
+import home from '../Assests/Img/home.jpg';
 import Grid from '@mui/material/Grid';
+import Caurosel from './Caurosel'
 const Item = ({ children }) => {
   return <div>{children}</div>;
 };
 const Home = () => {
   return (
     <>
-      <br></br>
-      <br></br>
-      <br></br>
-      <br></br>
       <div className='contain'>
-        <div className='text-home'>
+        {/* <div className='text-home'>
           <h2>Elevate Your Home, Inspire Living</h2>
           <p className='inner-text'>Transform your space with our personalized interior design services, blending modern elegance and individual style. From residential makeovers to commercial transformations, we specialize in crafting timeless and sophisticated environments. Elevate your surroundings with us.</p>
-        </div>
+        </div> */}
           <div className='row'>
         <div className='column'>
           <img
-            src={homeGif}
+            src={home}
             alt="no img"
           />
           </div>
@@ -27,7 +24,7 @@ const Home = () => {
       </div>
       <h1>Our achievements...</h1>
 
-      <div className="main-content">
+      {/* <div className="main-content">
         <Grid container spacing={2}>
           <Grid item xs={4} md={4}>
             <Item><img className="dash-img" src="https://pngimg.com/uploads/award/award_PNG58.png" alt="Achievement Image" />
@@ -45,8 +42,8 @@ const Home = () => {
             </Item>
           </Grid>
         </Grid>
-      </div>
-      
+      </div> */}
+      <Caurosel />
       </>
       )
 }

@@ -2,17 +2,17 @@
   display: flex;
   flex-direction: column; 
   align-items: center;
-  background-color: #000000;
-  color: white;
+  background-color: #ffffff;
   padding: 10px;
   margin: 0;
+  color: rgba(0, 0, 0, 0.74);
 }
 
 .flex-container {
   display: flex;
   justify-content: space-between;
   width: 100%;
-  margin-left: 20%;
+  margin-left: 1%;
 }
 
 .flex-item {
@@ -23,8 +23,28 @@
 
 .icons-footer {
   margin-top: 10px; 
+  color: grey;
 }
 
 .icon-container {
   display: flex;
+}
+.content-about{
+  color: grey;
+  word-spacing: 2px;
+}
+.content{
+  color: grey;
+  letter-spacing: 2px;
+  width: 11vw;
+  margin-left: 2%;
+  /* background-color: aqua; */
+}
+.content-foot{
+  color: grey;
+  word-spacing: 2px;
+  width: 18vw;
+  height: 28vh;
+  /* background-color: aqua; */
+  
 }

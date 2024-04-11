@@ -1,13 +1,13 @@
-package com.sangamithra.mithra;
+package com.example.demo;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class MithraApplication {
+public class NewApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(MithraApplication.class, args);
+		SpringApplication.run(NewApplication.class, args);
 	}
 
 }
